@@ -5,6 +5,8 @@ var validUrl = require('valid-url')
 var fs = require('fs');
 var youtubedl = require('youtube-dl');
 
+app.set('port', (process.env.PORT || 3000));
+
 var log = function() {
     var timestamp = new Date().toLocaleString();
     var LOG_PREFIX = `[${timestamp}] -`;
@@ -71,7 +73,7 @@ app.get('/*', (req, res) => {
     res.send(req.path)
 })
 
-app.listen(3000, () => {
-    log('youtubedl app listening on port 3000!')
+app.listen(app.get('port'), () => {
+    log('youtubedl app listening on port', app.get('port'))
 })
 
