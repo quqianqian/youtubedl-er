@@ -41,8 +41,8 @@ function getAssetStream(url, args) {
     return video;
 }
 
-app.get('/youtubedl', (req, res) => {
-    log("Got /youtubedl request")
+app.get('/', (req, res) => {
+    log("Got request")
     log(req.headers)
     var video = getAssetStream(req.query.url, req.query)
     if (video) {
@@ -67,10 +67,6 @@ app.get('/youtubedl', (req, res) => {
     } else {
         res.send('Hello World!, ' + req.query.url)
     }
-})
-
-app.get('/*', (req, res) => {
-    res.send(req.path)
 })
 
 app.listen(app.get('port'), () => {
