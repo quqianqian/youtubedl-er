@@ -1,14 +1,15 @@
 {
   "name": "youtubedl-er",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "Small service for downloading a YouTube video",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Tyler Casson",
+  "repository": "tylercasson/youtubedl-er",
+  "license": "MIT",
   "dependencies": {
     "express": "^4.15.2",
     "valid-url": "^1.0.9",
