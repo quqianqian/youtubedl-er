@@ -7,7 +7,7 @@
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Tyler Casson",
+  "author": "Tyler Casson <me@tylercasson.com>",
   "repository": "tylercasson/youtubedl-er",
   "license": "MIT",
   "dependencies": {
