@@ -64,9 +64,8 @@ app.get('/', (req, res) => {
         video.on('end', function() {
             log('finished downloading!');
         });
-    } else {
-        res.send('Hello World!, ' + req.query.url)
     }
+    res.sendStatus(400)
 })
 
 app.listen(app.get('port'), () => {
