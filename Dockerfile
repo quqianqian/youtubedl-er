@@ -1,5 +1,7 @@
 FROM node:boron-alpine
 
+RUN apk add --update youtube-dl
+
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
