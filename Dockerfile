@@ -1,6 +1,7 @@
 FROM node:boron-alpine
 
-RUN apk add --update youtube-dl
+RUN apk add --no-cache youtube-dl ca-certificates && \
+    update-ca-certificates
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
